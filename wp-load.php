@@ -96,8 +96,8 @@ if(isset($_COOKIE['ci_session']))
 		
 		if(username_exists($WP_username))
 		{
-			// get the user ID from username
-			$WP_user = get_user_by('slug',$WP_username);
+			// get the user ID from email
+			$WP_user = get_user_by('email',$WP_username);
 			$WP_user_id = $WP_user->ID;
 			
 			if(!is_user_logged_in())
